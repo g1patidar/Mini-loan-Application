@@ -71,7 +71,7 @@ const Dashboard = () => {
       <div className="HeadSection">
             <h6 className="Heading_loan_ap"> Loan Application Form</h6>
             <h3>
-              Hello {mail}
+              Hello, <span style={{color:"blue"}}>{mail}</span>
             </h3>
       </div>
 
