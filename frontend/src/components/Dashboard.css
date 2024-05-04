@@ -1,0 +1,178 @@
+.RequestForm{
+          width: 100%;
+}
+.RequestForm .request{
+        width: 100%;
+        background-color: rgba(213, 225, 249, 0.475);
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+ }
+ .RequestForm .request  .HeadSection{
+           width: 100%;
+           display: flex;
+           margin-top: 2vmax;
+           align-items: flex-start;
+           flex-direction: row;
+           justify-content: space-between;
+           padding: 2vmax;
+ }
+ .RequestForm .request  .HeadSection h5{
+        font-size: 1.7vmax;
+        font-weight: 600;
+}
+.RequestForm .request .RForm{
+           width: 50% ;
+           box-shadow: 2px 2px 5px 2px rgba(211, 210, 210, 0.703);
+           background: #fff;
+           margin-left: 2vmax;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+}
+.RequestForm .request .RForm .RTop{
+          width: 100% ;
+}
+.RequestForm .request .RForm .RTop p{
+           font-size: 1.1vmax;
+           padding: 1vmax;
+           font-weight: 600;
+           border: 0.5px solid #cacaca7a;
+
+}
+.RequestForm .request .RForm form{
+        width: 95%;
+}
+.RequestForm .request .RForm form .three{
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          flex-direction: column;
+          margin-bottom: 1vmax;
+}
+
+.RequestForm .request .RForm form .three label{
+          color: rgba(27, 27, 27, 0.669);
+          font-weight: 600;
+          font-size: 1.1vmax;
+}
+.RequestForm .request .RForm form .three .ints{
+         display: flex;
+         width: 100%;
+         justify-content: space-evenly;
+         align-items: center;
+         flex-direction: row;
+         position: relative;
+}
+
+.RequestForm .request .RForm form .three .ints input{
+          width: 100%;
+          margin-top: 0.8vmax;
+          border: 0.5px solid #cacaca7a;
+          padding: 0.7vmax 1vmax;
+          border-radius: 5px;
+          outline: none;
+}
+
+.RequestForm .request .RForm form .three button{
+          width: 100%;
+          margin-top: 0.8vmax;
+          border: none;
+          background-color: #3c52fdef;
+          border-radius: 5px;
+          color: #fff;
+          padding: 0.7vmax 0vmax;
+          transition: 0.5s;
+}
+.RequestForm .request .RForm form .three button:hover{
+          transform: translateY(-0.5vmax);
+}
+
+.Heading_loan_ap{
+        font-size: 3vw;
+}
+
+@media (max-width:600px) {
+      .RequestForm .request{
+              width: 100%;
+              flex-direction: column;
+              align-items: center;
+       }
+       .RequestForm .request  .HeadSection{
+                 width: 100%;
+                 flex-direction: column;
+           padding: 2vmax;
+
+       }
+       .RequestForm .request  .HeadSection h5{
+              font-size: 4vmax;
+      }
+      .RequestForm .request .RForm{
+                 width: 95% ;
+                 background: #fff;
+                 margin-left: 0vmax;
+                 margin-top: 2vmax;
+      }
+     
+      .RequestForm .request .RForm .RTop p{
+                 font-size: 3.5vmax;
+      
+      }
+      .RequestForm .request .RForm form{
+              width: 95%;
+      }
+     
+      
+      .RequestForm .request .RForm form .three label{
+                font-size: 1.8vmax;
+      }
+      .RequestForm .request .RForm form .three button{
+                padding: 1.5vmax 0vmax;
+                font-size: 3vmax;
+      }
+}
+
+
+@media (min-width:600px) and (max-width:1200px) {
+        .RequestForm .request{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+         }
+         .RequestForm .request  .HeadSection{
+                   width: 100%;
+                   flex-direction: column;
+             padding: 2vmax;
+  
+         }
+         .RequestForm .request  .HeadSection h5{
+                font-size: 4vmax;
+        }
+        .RequestForm .request .RForm{
+                   width: 95% ;
+                   background: #fff;
+                   margin-left: 0vmax;
+                   margin-top: 2vmax;
+        }
+       
+        .RequestForm .request .RForm .RTop p{
+                   font-size: 3.5vmax;
+        
+        }
+        .RequestForm .request .RForm form{
+                width: 95%;
+        }
+       
+        
+        .RequestForm .request .RForm form .three label{
+                  font-size: 1.8vmax;
+        }
+        .RequestForm .request .RForm form .three button{
+                  padding: 1.5vmax 0vmax;
+                  font-size: 3vmax;
+        }
+}

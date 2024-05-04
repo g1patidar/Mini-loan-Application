@@ -1,0 +1,52 @@
+.StatusPage{
+          width: 100%;
+}
+.StatusPage .status{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+}
+.StatusPage .status .textStatus{
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          margin-top: 3vmax;
+          box-shadow: 2px 2px 5px 2px rgba(247, 204, 204, 0.644);
+}
+.StatusPage .status .textStatus h2{
+        font-size: 3.76vw;
+        margin-top: 1vmax;
+}
+.StatusPage .status .textStatus h3{
+          font-size: 2.8vw;
+          margin-top: 1vmax;
+          color: rgba(0, 0, 0, 0.716);
+  }
+  .StatusPage .status .textStatus p{
+           background-color: rgba(221, 250, 192, 0.739);
+           margin-top: 2vmax;
+           padding: 0.6vmax 2.3vmax;
+           font-weight: 600;
+           color: rgb(128, 73, 1);
+  }
+
+
+
+  
+  .Status_show{
+        margin: auto;
+        padding: 10vw;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 3vmax;
+        box-shadow: 2px 2px 5px 2px rgba(247, 204, 204, 0.644);
+}
+.text-center1{
+        margin-top: 40px;
+}
+  
