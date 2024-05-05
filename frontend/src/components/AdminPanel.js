@@ -31,7 +31,7 @@ const AdminPanel = () => {
   };
    //applying extra layer of security
   const handleAlertReject = (state, _id) => {
-    setj(j+1);
+    
     if (window.confirm("Are you sure you want to reject the loan!")) {
       var txt = "You pressed OK!";
       
@@ -45,14 +45,14 @@ const AdminPanel = () => {
       state,
       _id,
       status,
-    });
+    }).then(()=>setj(j+1));
   };
   const handleUpdateReject = async (state, _id, status) => {
      await axios.put("http://localhost:9000/api/v1/update", {
       state,
       _id,
       status,
-    });
+    }).then(()=>setj(j+1));
   };
 
   return (
