@@ -17,11 +17,11 @@
           box-shadow: 2px 2px 5px 2px rgba(247, 204, 204, 0.644);
 }
 .StatusPage .status .textStatus h2{
-        font-size: 3.76vw;
+        font-size: 3.0vw;
         margin-top: 1vmax;
 }
 .StatusPage .status .textStatus h3{
-          font-size: 2.8vw;
+          font-size: 2.4vw;
           margin-top: 1vmax;
           color: rgba(0, 0, 0, 0.716);
   }
@@ -48,5 +48,15 @@
 }
 .text-center1{
         margin-top: 40px;
+}
+@media (max-width:600px){
+        .StatusPage .status .textStatus h2{
+                font-size: 2vh;
+        }
+        .StatusPage .status .textStatus h3{
+                font-size: 2.0vh;
+                margin-top: 1vmax;
+                color: rgba(0, 0, 0, 0.716);
+        }
 }
   
