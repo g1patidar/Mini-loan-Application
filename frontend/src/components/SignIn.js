@@ -28,7 +28,7 @@ const SignIn = () => {
         toast.error(data.error);
       } else {
         setData({});
-         localStorage.setItem("role", data.user.role);
+        localStorage.setItem("role", data.user.role);
         toast.success("Login Successfully...");
         localStorage.setItem("email", email);
 
@@ -38,66 +38,66 @@ const SignIn = () => {
           navigate("/dashboard");
         }
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
-       
+
     <div>
-           <div className="LogIn">
-                <div className="Login">
-                
-                <div className="LoginLeft">
-                    <h5>Mini Loan App</h5>
-                    <p>Welcome to Oue Website! Please sign in to take the loan.</p>
-                  <img src={SignUpImg} alt="" />
+      <div className="LogIn">
+        <div className="Login">
+
+          <div className="LoginLeft">
+            <h5>Mini Loan App</h5>
+            <p>Welcome to Oue Website! Please sign in to take the loan.</p>
+            <img src={SignUpImg} alt="" />
+          </div>
+          <div className="LoginRight">
+            <div className="Top">
+              <h3>Sign In to Take Loans<span>!</span></h3>
+              <p>start for free/create an account</p>
+            </div>
+            <div className="LoginMedium">
+              <form onSubmit={HandleLogin}>
+
+                <div className="two">
+                  <label>Email</label>
+                  <div className="int">
+                    <i class="ri-user-fill"></i>
+                    <input type="email" name='email'
+                      value={data.email}
+                      onChange={(e) => setData({ ...data, email: e.target.value })}
+                      placeholder="Enter Your Email" />
+                  </div>
                 </div>
-                <div className="LoginRight">
-                        <div className="Top">
-                              <h3>Sign In to Take Loans<span>!</span></h3>
-                              <p>start for free/create an account</p>
-                        </div>
-                        <div className="LoginMedium">
-                              <form onSubmit={HandleLogin}>
-                              
-                                  <div className="two">
-                                        <label>Email</label>
-                                        <div className="int">
-                                        <i class="ri-user-fill"></i>        
-                                        <input type="email" name='email'
-                                          value={data.email}
-                                         onChange={(e) => setData({ ...data, email: e.target.value })}
-                                        placeholder="Enter Your Email"  />
-                                        </div>
-                                  </div>
-                                  <div className="two">
-                                        <label>Password</label>
-                                        <div className="int">
-                                        <i class="ri-git-repository-private-fill"></i>     
-                                        <input type="password" name='password'
-                                         value={data.password}
-                                         onChange={(e) => setData({ ...data, password: e.target.value })}
-                                        placeholder="Type Your Password"  />
-                                        </div>
-                                  </div>
-                                                      
-                                  <div className="two">
-                                  <button type="submit">Sign in</button>
-                                  </div>
-                                  <div className="line2">
-                                        <p >Don't have any account? <Link to='/'>SignUp</Link></p>
-                                  </div>
-                              </form>
-                        </div>
-                       
+                <div className="two">
+                  <label>Password</label>
+                  <div className="int">
+                    <i class="ri-git-repository-private-fill"></i>
+                    <input type="password" name='password'
+                      value={data.password}
+                      onChange={(e) => setData({ ...data, password: e.target.value })}
+                      placeholder="Type Your Password" />
+                  </div>
                 </div>
 
+                <div className="two">
+                  <button type="submit">Sign in</button>
+                </div>
+                <div className="line2">
+                  <p >Don't have any account? <Link to='/'>SignUp</Link></p>
+                </div>
+              </form>
+            </div>
 
-</div>
-</div>
-</div>
+          </div>
 
-   
+
+        </div>
+      </div>
+    </div>
+
+
   );
 };
 
