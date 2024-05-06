@@ -79,9 +79,11 @@ const LoanRepayment = () => {
           <h2>
             {/* Hi {email},<br />
             You need too pay the amount:{data.loanAmount}Rs. in {data.term}{" "}
+
             weeks. <br />  */}
             so the weekly installment amount comes to be{" "}
             {parseInt(data.loanAmount / data.term)}Rs.
+
           </h2>
         )}
 
