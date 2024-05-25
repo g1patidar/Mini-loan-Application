@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import HeaderAdmin from "./HeaderAdmin";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./AdminPanel.css"
 
 const AdminPanel = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [j , setj]= useState(0);
   const role = localStorage.getItem("role");
   const email = localStorage.getItem("email");
-  if (role !== "admin") navigate("/login");
+  // if (role !== "admin") navigate("/login");
   useEffect(() => {
     //making get request to get all user who applied for loan
     axios.get("http://localhost:9000/api/v1/getApplicants").then(function (response) {
