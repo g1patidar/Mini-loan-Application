@@ -24,8 +24,9 @@ const SignIn = () => {
         email,
         password,
       });
-      if (data.error) {
-        toast.error(data.error);
+      
+      if (data.err) {
+        toast.error(data.err);
       } else {
         setData({});
         localStorage.setItem("role", data.user.role);
