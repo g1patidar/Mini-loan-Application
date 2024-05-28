@@ -15,7 +15,7 @@ const HeaderAdmin = () => {
       var txt = "You pressed Cancel!";
     }
   };
-  if (!localStorage.getItem("email")) navigate("/login");
+  // if (!localStorage.getItem("email")) navigate("/login");
   return (
     <div>
       <div className="flex justify-between border-b-4 items-center">
@@ -25,7 +25,7 @@ const HeaderAdmin = () => {
             onClick={() => {
               handleAlert();
             }}
-            className="  px-2 text-[13px] mx-4 shadow-sm bg-red-700 text-white rounded-lg   py-2  cursor-pointer"
+            className=" px-2 text-[13px] mx-4 shadow-sm bg-red-700 text-white rounded-lg   py-2  cursor-pointer"
           >
             Sign Out
           </button>

@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import HeaderAdmin from "./HeaderAdmin";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./AdminPanel.css"
 
 const AdminPanel = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [j , setj]= useState(0);
   const role = localStorage.getItem("role");
   const email = localStorage.getItem("email");
-  if (role !== "admin") navigate("/login");
+  // if (role !== "admin") navigate("/login");
   useEffect(() => {
     //making get request to get all user who applied for loan
     axios.get("http://localhost:9000/api/v1/getApplicants").then(function (response) {
@@ -20,10 +20,9 @@ const AdminPanel = () => {
 
   //applying extra layer of security
   const handleAlertApprove = (state, _id) => {
-    setj(j+1)
+    
     if (window.confirm("Are you sure you want to approve the loan!")) {
       var txt = "You pressed OK!";
-      
       handleUpdateApprove(state, _id, "APPROVED");
     } else {
       var txt = "You pressed Cancel!";
@@ -31,10 +30,9 @@ const AdminPanel = () => {
   };
    //applying extra layer of security
   const handleAlertReject = (state, _id) => {
-    
+   
     if (window.confirm("Are you sure you want to reject the loan!")) {
       var txt = "You pressed OK!";
-      
       handleUpdateReject(state, _id, "REJECTED");
     } else {
       var txt = "You pressed Cancel!";
@@ -45,20 +43,21 @@ const AdminPanel = () => {
       state,
       _id,
       status,
-    }).then(()=>setj(j+1));
+    }).then(()=>{setj(j+1)});
   };
   const handleUpdateReject = async (state, _id, status) => {
      await axios.put("http://localhost:9000/api/v1/update", {
       state,
       _id,
       status,
-    }).then(()=>setj(j+1));
+    }).then(()=>{setj(j+1)});
   };
+  
 
   return (
     <div className="AdminPanel">
       <HeaderAdmin />
-      <h1 className="text-4xl font-serif font-semibold mb-2 mt-3">
+      <h1 className="text-3 xl font-serif font-semibold mb-2 mt-3 md:text-5xl">
           ADMIN PANEL
         </h1>
      <div className="admin">
@@ -103,8 +102,9 @@ const AdminPanel = () => {
                     Reject
                   </button>
                 </div>
-              
+                
             </div>
+            
           );
         })}
       </div>

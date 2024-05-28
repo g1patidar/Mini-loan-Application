@@ -26,7 +26,7 @@ const LoanRepayment = () => {
   }, [j]);
 
 
-  if (!data) return;
+  // if (!data) return;
 
 
 
